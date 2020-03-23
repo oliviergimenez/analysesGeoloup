@@ -3,7 +3,11 @@
 
 # Motivation
 
-Dans ce travail, nous décrivons la proportion d’éleveurs qui concentrent les attaques de loups sur des troupeaux domestiques (ou déprédations) en France. Nous n'analysons pas ici les facteurs qui expliqueraient les variations dans le temps et/ou dans l'espace des patrons de déprédations. Nous basons notre analyse sur une extraction nominative effectuée le 15 mai 2019 de la [base de données nationale Géoloup](https://loup.application.developpement-durable.gouv.fr/) pour l'instruction et le suivi des indemnisations des attaques de loups (source des données : DDT / DDTM). La période considérée ici va de 2009 à 2018. Les constats d’attaque retenus sont ceux qualifiés dans la base Géoloup de **Loup non écarté**, quelle que soit l’espèce domestique prédatée. Nous avons qualifié une attaque de la manière suivante :
+Dans ce travail, nous décrivons la proportion d’éleveurs qui concentrent les attaques de loups sur des troupeaux domestiques (ou déprédations) en France. Nous n'analysons pas ici les facteurs qui expliqueraient les variations dans le temps et/ou dans l'espace des patrons de déprédations. 
+
+Nous basons notre analyse sur une extraction nominative effectuée le 15 mai 2019 de la [base de données nationale Géoloup](https://loup.application.developpement-durable.gouv.fr/) pour l'instruction et le suivi des indemnisations des attaques de loups (source des données : DDT / DDTM). Les données ne sont pas publiques, et les droits d’accès à la base de données sont ceux obtenus par l’INRAE-UMR SELMET via une convention signée avec la DREAL AURA le 28 mars 2019. 
+
+La période considérée ici va de 2009 à 2018. Les constats d’attaque retenus sont ceux qualifiés dans la base Géoloup de **Loup non écarté**, quelle que soit l’espèce domestique prédatée. Nous avons qualifié une attaque de la manière suivante :
 * Seul les constats répertoriant une victime ou plus sont retenus comme correspondant à une attaque (réussie) ;
 * Une attaque constatée sur le troupeau d’un groupement pastoral et impactant les animaux appartenant à plusieurs éleveurs est ici considérée comme une seule et même attaque ;
 * Deux constats d’attaque impactant un même troupeau à la même date sont considérés comme provenant d’une seule et même attaque (une attaque peut donner lieu à plusieurs constats si les animaux morts sont retrouvés à plusieurs jours d’intervalle).
