@@ -187,7 +187,6 @@ attaques / eleveurs
 ggsave('fig1.png',dpi=600)
 ```
 
-
 ## Comment se répartissent les attaques par département?
 
 
@@ -230,7 +229,7 @@ ggplot() +
   facet_wrap(~an)
 ```
 
-![](analysesgeoloup_files/figure-html/unnamed-chunk-7-1.png)<!-- -->
+![](maps.png)<!-- -->
 
 ## Comment les attaques se répartissent-elles entre ovins, bovins, canidés, caprins, équins et autres?
 
@@ -267,7 +266,7 @@ geoloup_france %>%
         strip.text = element_text(face="bold"))
 ```
 
-![](analysesgeoloup_files/figure-html/unnamed-chunk-8-1.png)<!-- -->
+![](species.png)<!-- -->
 
 ## Quand dans l’année les attaques ont-elles lieu?
 
@@ -308,7 +307,7 @@ geoloup_france %>%
         strip.text = element_text(face="bold"))
 ```
 
-![](analysesgeoloup_files/figure-html/unnamed-chunk-9-1.png)<!-- -->
+![](pheno.png)<!-- -->
 
 ## Quelles proportions d'éleveurs concentrent la majorité des attaques? 
 
@@ -335,11 +334,22 @@ eleveurs35 %>%
 prop35
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["an"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["prop.eleveurs"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"2009","2":"0.04255319"},{"1":"2010","2":"0.06476684"},{"1":"2011","2":"0.06289308"},{"1":"2012","2":"0.04511278"},{"1":"2013","2":"0.05253940"},{"1":"2014","2":"0.05306122"},{"1":"2015","2":"0.05921938"},{"1":"2016","2":"0.06155633"},{"1":"2017","2":"0.06474820"},{"1":"2018","2":"0.06865402"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+```
+## # A tibble: 10 x 2
+## # Groups:   an [10]
+##       an prop.eleveurs
+##    <dbl>         <dbl>
+##  1  2009        0.0426
+##  2  2010        0.0648
+##  3  2011        0.0629
+##  4  2012        0.0451
+##  5  2013        0.0525
+##  6  2014        0.0531
+##  7  2015        0.0592
+##  8  2016        0.0616
+##  9  2017        0.0647
+## 10  2018        0.0687
+```
 
 Idem pour 50% : 
 
@@ -362,11 +372,22 @@ eleveurs50 %>%
 prop50
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["an"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["prop.eleveurs"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"2009","2":"0.10334347"},{"1":"2010","2":"0.14766839"},{"1":"2011","2":"0.13626834"},{"1":"2012","2":"0.09586466"},{"1":"2013","2":"0.11208406"},{"1":"2014","2":"0.11700680"},{"1":"2015","2":"0.12516824"},{"1":"2016","2":"0.12775842"},{"1":"2017","2":"0.12949640"},{"1":"2018","2":"0.13911472"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+```
+## # A tibble: 10 x 2
+## # Groups:   an [10]
+##       an prop.eleveurs
+##    <dbl>         <dbl>
+##  1  2009        0.103 
+##  2  2010        0.148 
+##  3  2011        0.136 
+##  4  2012        0.0959
+##  5  2013        0.112 
+##  6  2014        0.117 
+##  7  2015        0.125 
+##  8  2016        0.128 
+##  9  2017        0.129 
+## 10  2018        0.139
+```
 
 Et enfin 75% : 
 
@@ -389,11 +410,22 @@ eleveurs75 %>%
 prop75
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["an"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["prop.eleveurs"],"name":[2],"type":["dbl"],"align":["right"]}],"data":[{"1":"2009","2":"0.3495441"},{"1":"2010","2":"0.4145078"},{"1":"2011","2":"0.3857442"},{"1":"2012","2":"0.3233083"},{"1":"2013","2":"0.3450088"},{"1":"2014","2":"0.3537415"},{"1":"2015","2":"0.3526245"},{"1":"2016","2":"0.3646922"},{"1":"2017","2":"0.3597122"},{"1":"2018","2":"0.3667570"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+```
+## # A tibble: 10 x 2
+## # Groups:   an [10]
+##       an prop.eleveurs
+##    <dbl>         <dbl>
+##  1  2009         0.350
+##  2  2010         0.415
+##  3  2011         0.386
+##  4  2012         0.323
+##  5  2013         0.345
+##  6  2014         0.354
+##  7  2015         0.353
+##  8  2016         0.365
+##  9  2017         0.360
+## 10  2018         0.367
+```
 
 On visualise ces résultats :
 
@@ -427,7 +459,7 @@ prop75 %>%
               color="orangered", size= 10)
 ```
 
-![](analysesgeoloup_files/figure-html/unnamed-chunk-13-1.png)<!-- -->
+![](fig2.png)<!-- -->
 
 ```r
 ggsave('fig2.png',dpi=600)
@@ -506,11 +538,20 @@ ratio_france <- as_tibble(ratio) %>%
 ratio_france
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["value"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["an"],"name":[2],"type":["chr"],"align":["left"]},{"label":["scale"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"0.2580645","2":"2009-2010","3":"France entière"},{"1":"0.3095238","2":"2010-2011","3":"France entière"},{"1":"0.3846154","2":"2011-2012","3":"France entière"},{"1":"0.3500000","2":"2012-2013","3":"France entière"},{"1":"0.4081633","2":"2013-2014","3":"France entière"},{"1":"0.4067797","2":"2014-2015","3":"France entière"},{"1":"0.4264706","2":"2015-2016","3":"France entière"},{"1":"0.4146341","2":"2016-2017","3":"France entière"},{"1":"0.4183673","2":"2017-2018","3":"France entière"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+```
+## # A tibble: 9 x 3
+##   value an        scale         
+##   <dbl> <chr>     <chr>         
+## 1 0.258 2009-2010 France entière
+## 2 0.310 2010-2011 France entière
+## 3 0.385 2011-2012 France entière
+## 4 0.35  2012-2013 France entière
+## 5 0.408 2013-2014 France entière
+## 6 0.407 2014-2015 France entière
+## 7 0.426 2015-2016 France entière
+## 8 0.415 2016-2017 France entière
+## 9 0.418 2017-2018 France entière
+```
 
 ```r
 ratio <- NULL
@@ -533,11 +574,20 @@ ratio_dptmt <- as_tibble(ratio) %>%
 ratio_dptmt
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["value"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["an"],"name":[2],"type":["chr"],"align":["left"]},{"label":["scale"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"0.2758621","2":"2009-2010","3":"Départements les plus impactés"},{"1":"0.3513514","2":"2010-2011","3":"Départements les plus impactés"},{"1":"0.4062500","2":"2011-2012","3":"Départements les plus impactés"},{"1":"0.3939394","2":"2012-2013","3":"Départements les plus impactés"},{"1":"0.4500000","2":"2013-2014","3":"Départements les plus impactés"},{"1":"0.4081633","2":"2014-2015","3":"Départements les plus impactés"},{"1":"0.4385965","2":"2015-2016","3":"Départements les plus impactés"},{"1":"0.4179104","2":"2016-2017","3":"Départements les plus impactés"},{"1":"0.4736842","2":"2017-2018","3":"Départements les plus impactés"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+```
+## # A tibble: 9 x 3
+##   value an        scale                         
+##   <dbl> <chr>     <chr>                         
+## 1 0.276 2009-2010 Départements les plus impactés
+## 2 0.351 2010-2011 Départements les plus impactés
+## 3 0.406 2011-2012 Départements les plus impactés
+## 4 0.394 2012-2013 Départements les plus impactés
+## 5 0.45  2013-2014 Départements les plus impactés
+## 6 0.408 2014-2015 Départements les plus impactés
+## 7 0.439 2015-2016 Départements les plus impactés
+## 8 0.418 2016-2017 Départements les plus impactés
+## 9 0.474 2017-2018 Départements les plus impactés
+```
 
 ```r
 ratio <- NULL
@@ -560,11 +610,20 @@ ratio_msf <- as_tibble(ratio) %>%
 ratio_msf
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["value"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["an"],"name":[2],"type":["chr"],"align":["left"]},{"label":["scale"],"name":[3],"type":["chr"],"align":["left"]}],"data":[{"1":"0.2400000","2":"2009-2010","3":"Massifs les plus impactés"},{"1":"0.3750000","2":"2010-2011","3":"Massifs les plus impactés"},{"1":"0.4285714","2":"2011-2012","3":"Massifs les plus impactés"},{"1":"0.3548387","2":"2012-2013","3":"Massifs les plus impactés"},{"1":"0.3846154","2":"2013-2014","3":"Massifs les plus impactés"},{"1":"0.3617021","2":"2014-2015","3":"Massifs les plus impactés"},{"1":"0.4705882","2":"2015-2016","3":"Massifs les plus impactés"},{"1":"0.3870968","2":"2016-2017","3":"Massifs les plus impactés"},{"1":"0.4848485","2":"2017-2018","3":"Massifs les plus impactés"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+```
+## # A tibble: 9 x 3
+##   value an        scale                    
+##   <dbl> <chr>     <chr>                    
+## 1 0.24  2009-2010 Massifs les plus impactés
+## 2 0.375 2010-2011 Massifs les plus impactés
+## 3 0.429 2011-2012 Massifs les plus impactés
+## 4 0.355 2012-2013 Massifs les plus impactés
+## 5 0.385 2013-2014 Massifs les plus impactés
+## 6 0.362 2014-2015 Massifs les plus impactés
+## 7 0.471 2015-2016 Massifs les plus impactés
+## 8 0.387 2016-2017 Massifs les plus impactés
+## 9 0.485 2017-2018 Massifs les plus impactés
+```
 
 Visualisons maintenant cette quantité : 
 
@@ -592,7 +651,7 @@ bind_rows(ratio_france,ratio_dptmt,ratio_msf) %>%
         axis.text.x = element_text(angle = 45, hjust = 1))
 ```
 
-![](analysesgeoloup_files/figure-html/unnamed-chunk-15-1.png)<!-- -->
+![](fig3.png)<!-- -->
 
 ```r
 ggsave('fig3.png',dpi=600)
@@ -653,12 +712,23 @@ unik <- bind_rows(unik_france, unik_dptmt, unik_msf) %>%
 unik
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["n"],"name":[1],"type":["int"],"align":["right"]},{"label":["nn"],"name":[2],"type":["int"],"align":["right"]},{"label":["scale"],"name":[3],"type":["fctr"],"align":["left"]}],"data":[{"1":"1","2":"85","3":"France entière"},{"1":"2","2":"22","3":"France entière"},{"1":"3","2":"18","3":"France entière"},{"1":"4","2":"9","3":"France entière"},{"1":"5","2":"5","3":"France entière"},{"1":"6","2":"7","3":"France entière"},{"1":"7","2":"2","3":"France entière"},{"1":"8","2":"5","3":"France entière"},{"1":"9","2":"2","3":"France entière"},{"1":"10","2":"4","3":"France entière"},{"1":"1","2":"57","3":"Départements les plus impactés"},{"1":"2","2":"20","3":"Départements les plus impactés"},{"1":"3","2":"19","3":"Départements les plus impactés"},{"1":"4","2":"8","3":"Départements les plus impactés"},{"1":"5","2":"1","3":"Départements les plus impactés"},{"1":"6","2":"9","3":"Départements les plus impactés"},{"1":"7","2":"1","3":"Départements les plus impactés"},{"1":"8","2":"3","3":"Départements les plus impactés"},{"1":"9","2":"2","3":"Départements les plus impactés"},{"1":"10","2":"4","3":"Départements les plus impactés"},{"1":"1","2":"51","3":"Massifs les plus impactés"},{"1":"2","2":"17","3":"Massifs les plus impactés"},{"1":"3","2":"17","3":"Massifs les plus impactés"},{"1":"4","2":"6","3":"Massifs les plus impactés"},{"1":"5","2":"1","3":"Massifs les plus impactés"},{"1":"6","2":"9","3":"Massifs les plus impactés"},{"1":"7","2":"1","3":"Massifs les plus impactés"},{"1":"8","2":"3","3":"Massifs les plus impactés"},{"1":"9","2":"2","3":"Massifs les plus impactés"},{"1":"10","2":"3","3":"Massifs les plus impactés"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
-
+```
+## # A tibble: 30 x 3
+## # Groups:   n [10]
+##        n    nn scale         
+##    <int> <int> <fct>         
+##  1     1    85 France entière
+##  2     2    22 France entière
+##  3     3    18 France entière
+##  4     4     9 France entière
+##  5     5     5 France entière
+##  6     6     7 France entière
+##  7     7     2 France entière
+##  8     8     5 France entière
+##  9     9     2 France entière
+## 10    10     4 France entière
+## # … with 20 more rows
+```
 
 ```r
 unik %>%
@@ -692,7 +762,7 @@ unik %>%
         strip.text = element_text(face="bold")) 
 ```
 
-![](analysesgeoloup_files/figure-html/unnamed-chunk-17-1.png)<!-- -->
+![](fig4.png)<!-- -->
 
 ```r
 ggsave('fig4.png',dpi=600)
