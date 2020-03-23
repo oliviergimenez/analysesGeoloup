@@ -1,4 +1,6 @@
-# Etude descriptive du phénomène de concentration des attaques de loup sur les élevages domestiques en France: Analyse de la base de données nationale Géoloup en prélude à un article à publier dans une revue scientifique
+# Etude descriptive du phénomène de concentration des attaques de loup sur les élevages domestiques en France
+## Analyse de la base de données nationale Géoloup en prélude à un article à publier dans une revue scientifique
+### Olivier Gimenez et Olivier Bonnet, mars 2020
 
 # Motivation
 
