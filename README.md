@@ -191,7 +191,7 @@ attaques / eleveurs
 ggsave('fig1.png',dpi=600)
 ```
 
-## Comment se répartissent les attaques par département?
+## Comment se répartissent les attaques par département ?
 
 
 ```r
