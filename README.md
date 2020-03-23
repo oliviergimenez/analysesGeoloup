@@ -1,5 +1,4 @@
-# Etude descriptive du phénomène de concentration des attaques de loup sur les élevages domestiques en France
-## Analyse de la base de données nationale Géoloup en prélude à un article à publier dans une revue scientifique
+# Etude descriptive du phénomène de concentration des attaques de loup sur les élevages domestiques en France : Analyse de la base de données nationale Géoloup en prélude à un article à publier dans une revue scientifique
 ### Olivier Gimenez et Olivier Bonnet, mars 2020
 
 # Motivation
@@ -102,7 +101,6 @@ geoloup_msf <- geoloup_processed %>%
 
 ## Combien d'éleveurs sont-ils présents dans la base?
 
-
 ```r
 geoloup_processed %>%
   group_by(an) %>%
@@ -110,11 +108,21 @@ geoloup_processed %>%
 tot.eleveurs
 ```
 
-<div data-pagedtable="false">
-  <script data-pagedtable-source type="application/json">
-{"columns":[{"label":["an"],"name":[1],"type":["dbl"],"align":["right"]},{"label":["nb.eleveurs"],"name":[2],"type":["int"],"align":["right"]}],"data":[{"1":"2009","2":"329"},{"1":"2010","2":"386"},{"1":"2011","2":"477"},{"1":"2012","2":"532"},{"1":"2013","2":"571"},{"1":"2014","2":"735"},{"1":"2015","2":"743"},{"1":"2016","2":"861"},{"1":"2017","2":"973"},{"1":"2018","2":"1107"}],"options":{"columns":{"min":{},"max":[10]},"rows":{"min":[10],"max":[10]},"pages":{}}}
-  </script>
-</div>
+```
+## # A tibble: 10 x 2
+##       an nb.eleveurs
+##    <dbl>       <int>
+##  1  2009         329
+##  2  2010         386
+##  3  2011         477
+##  4  2012         532
+##  5  2013         571
+##  6  2014         735
+##  7  2015         743
+##  8  2016         861
+##  9  2017         973
+## 10  2018        1107
+```
 
 ## Comment le nombre d'attaques se répartit-il dans le temps?
 
@@ -173,7 +181,7 @@ eleveurs <- tot.eleveurs %>%
 attaques / eleveurs
 ```
 
-![](analysesgeoloup_files/figure-html/unnamed-chunk-6-1.png)<!-- -->
+![](fig1.png)<!-- -->
 
 ```r
 ggsave('fig1.png',dpi=600)
