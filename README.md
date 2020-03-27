@@ -7,7 +7,7 @@ Dans ce travail, nous décrivons la proportion d’éleveurs qui concentrent les
 
 Nous basons notre analyse sur une extraction nominative de la [base de données nationale Géoloup](https://loup.application.developpement-durable.gouv.fr/) (source des données : DDT / DDTM) effectuée le 15 mai 2019. Les droits d’accès à la base de données sont ceux obtenus par l’INRAE-UMR SELMET via une convention signée avec la DREAL AURA le 28 mars 2019.
 
-La période considérée ici va de 2009 à 2018. Les constats d’attaque retenus sont ceux qualifiés dans la base Géoloup de **Loup non écarté**, quelle que soit l’espèce domestique prédatée. Nous avons qualifié une attaque de la manière suivante :
+La période considérée ici va de 2009 à 2018. Les constats d’attaque retenus sont ceux qualifiés dans la base Géoloup de Loup non écarté, quelle que soit l’espèce domestique prédatée. Nous avons qualifié une attaque de la manière suivante :
 * Seul les constats répertoriant une victime ou plus sont retenus comme correspondant à une attaque (réussie) ;
 * Une attaque constatée sur le troupeau d’un groupement pastoral et impactant les animaux appartenant à plusieurs éleveurs est ici considérée comme une seule et même attaque ;
 * Deux constats d’attaque impactant un même troupeau à la même date sont considérés comme provenant d’une seule et même attaque (une attaque peut donner lieu à plusieurs constats si les animaux morts sont retrouvés à plusieurs jours d’intervalle).
