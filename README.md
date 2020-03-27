@@ -73,7 +73,13 @@ On aura aussi besoin du même jeu de données en se concentrant sur les départe
 
 ```r
 geoloup_dptmt <- geoloup_processed %>%
-  filter(departement %in% c('alpes-de-haute-provence','alpes-maritimes','drome','hautes-alpes','isere','savoie','var')) %>%
+  filter(departement %in% c('alpes-de-haute-provence',
+  'alpes-maritimes',
+  'drome',
+  'hautes-alpes',
+  'isere',
+  'savoie',
+  'var')) %>%
   add_column(scale = 'Départements les plus impactés')
 ```
 
